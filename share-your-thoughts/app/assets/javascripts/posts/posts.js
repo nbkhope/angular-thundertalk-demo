@@ -1,5 +1,12 @@
 angular.module('shareYourThoughts')
 
-.factory('postsFactory', [function() {
+.factory('postsFactory', ['$http', function($http) {
+
+  // the factory object
+  var o = {
+    posts: []
+  };
+
+  return o;
 
 }]);
