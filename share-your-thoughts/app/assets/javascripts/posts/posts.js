@@ -7,6 +7,13 @@ angular.module('shareYourThoughts')
     posts: []
   };
 
+  o.getAll = function() {
+    return $http.get('/posts.json').success(function(data) {
+      angular.copy(data, o.posts);
+    });
+  };
+
+  // return the factory object
   return o;
 
 }]);
