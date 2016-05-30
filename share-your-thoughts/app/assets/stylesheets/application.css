@@ -14,3 +14,19 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background: AntiqueWhite;
+}
+
+.box-quote {
+  background-color: rgb(255, 177, 0);
+  background: linear-gradient(to right, rgb(255, 177, 0), rgba(255, 0, 0, 0.66));
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+.btn-like {
+  background-color: rgba(208, 0, 0, 0.41);
+  border-color: black;
+}
