@@ -1,4 +1,4 @@
-angular.module('shareYourThoughts', ['ui-router'])
+angular.module('shareYourThoughts', ['ui.router', 'templates'])
 
 .config(['$stateProvider', '$urlRouterProvider', 
   function($stateProvider, $urlRouterProvider) {
@@ -6,7 +6,7 @@ angular.module('shareYourThoughts', ['ui-router'])
   	// Define states (routes)
   	$stateProvider
   	  .state('index', {
-  	  	url: '/',
+  	  	url: '/index',
   	  	templateUrl: 'home/_home.html',
   	  	controller: 'MainCtrl',
   	  });
