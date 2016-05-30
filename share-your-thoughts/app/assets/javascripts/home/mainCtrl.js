@@ -5,6 +5,9 @@ angular.module('shareYourThoughts')
   // Associate posts variable with the posts in the factory object
   $scope.posts = postsFactory.posts;
 
+  // Default ordering for posts
+  $scope.postOrder = "-created_at";
+
   // For the form post information
   $scope.myPost = { content: "", upvotes: 0 };
 
@@ -25,6 +28,22 @@ angular.module('shareYourThoughts')
 
   $scope.upvotePost = function(post) {
     postsFactory.upvote(post);
+  };
+
+  $scope.orderPosts = function(criterium) {
+    switch(criterium) {
+      case 'content':
+        $scope.postOrder = "content";
+        break;
+      case 'created_at':
+        $scope.postOrder = "-created_at";
+        break;
+      case 'upvotes':
+        $scope.postOrder = "-upvotes";
+        break;
+      default:
+        $scope.postOrder = "-created_at";
+    }
   };
 
 }]);
