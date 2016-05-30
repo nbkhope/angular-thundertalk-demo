@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShareYourThoughts</title>
+  <title>Share Your Thoughts</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="shareYourThoughts">
 
-<%= yield %>
+	<ui-view></ui-view>
+
+	<!-- AngularJS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 
 </body>
 </html>
