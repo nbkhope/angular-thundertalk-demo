@@ -6,11 +6,11 @@
 	<div class="form-group form-group-lg">
 		<label for="content" class="col-xs-12 col-sm-offset-3 col-sm-6">Share your thoughts:</label>
 		<div class="col-xs-12 col-sm-offset-3 col-sm-6">
-			<textarea class="form-control input-lg" rows="3" cols="80" ng-model="content" id="content" placeholder="What are you thinking?"></textarea>
+			<textarea class="form-control input-lg" rows="3" cols="80" ng-model="content" id="content" placeholder="What are you thinking?" required></textarea>
 		</div>
 	</div>
 
 	<div class="col-xs-12 col-sm-offset-3">
-		<button type="submit" class="btn btn-primary">Share</button>
+		<button type="submit" class="btn btn-primary" ng-disabled="postForm.$invalid">Share</button>
 	</div>
 </form>
