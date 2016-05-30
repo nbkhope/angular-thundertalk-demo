@@ -21,6 +21,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content).merge(:upvotes: 0)
+    params.require(:post).permit(:content).merge(upvotes: 0)
   end
 end
