@@ -6,6 +6,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="shareYourThoughts">
+  <header class="jumbotron site-header">
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <span id="site-title">Share Your Thoughts</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
 	<main class="container">
 		<div class="row">
@@ -14,6 +23,14 @@
 	</main>
 
 	<%= javascript_include_tag 'application' %>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <span id="site-footer-message">Thank you for sharing!</span>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
