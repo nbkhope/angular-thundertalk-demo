@@ -29,6 +29,7 @@ gem 'responders', '~> 2.0'
 
 gem 'angular_rails_csrf'
 
+gem 'therubyracer'
 gem 'less-rails'
 
 group :development, :test do
