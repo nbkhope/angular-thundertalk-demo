@@ -1,0 +1,63 @@
+<form ng-submit="addPost()" name="postForm" class="form-horizontal" novalidate>
+  <div class="form-group form-group-lg">
+    <label for="content" class="col-xs-12 col-sm-offset-3 col-sm-6">Share your thoughts:</label>
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+      <textarea class="form-control input-lg" rows="3" cols="80" ng-model="myPost.content" id="content" placeholder="What are you thinking?" required></textarea>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="postForm.$invalid">Share</button>
+  </div>
+  <div class="col-xs-hidden col-sm-4">
+  </div>
+</form>
+
+<div class="col-xs-12">
+  <p>&nbsp;</p>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-2 col-sm-5">
+    <div class="btn-group">
+      <button class="btn btn-default" ng-click="orderPosts('content')">alphabetically</button>
+      <button class="btn btn-default" ng-click="orderPosts('created_at')">by date</button>
+      <button class="btn btn-default" ng-click="orderPosts('upvotes')">by likes</button>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-5">
+    <form class="form-inline">
+      <label for="search" class="control-label">Search:</label> <input type="text" ng-model="filtText" class="form-control">
+    </form>
+  </div>
+
+<div class="col-xs-12">
+  <p>&nbsp;</p>
+</div>
+
+  <!-- Live preview -->
+  <blockquote class="box-quote col-xs-12 col-sm-offset-2 col-sm-9" ng-show="postForm.$valid && postForm.$dirty">
+    {{myPost.content}}
+    <footer>
+      <div class="btn-group" role="group">
+        <button class="btn btn-default btn-like" ng-click="upvotePost(post)"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+        <button class="btn btn-default btn-like">{{myPost.upvotes}}</button>
+      </div>
+    </footer>
+  </blockquote>
+
+  <div ng-repeat="post in posts | orderBy:postOrder | filter:filtText">
+    <blockquote class="box-quote col-xs-12 col-sm-offset-2 col-sm-9">
+      {{post.content}}
+      <footer>
+        {{ post.created_at | date:"MMM. d, y 'at' h:mm a" }}
+        <div class="btn-group" role="group">
+          <button class="btn btn-default btn-like" ng-click="upvotePost(post)"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+          <button class="btn btn-default btn-like">{{post.upvotes}}</button>
+        </div>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
