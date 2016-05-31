@@ -21,6 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
+  # <<: *default
   adapter: postgresql
+  encoding: unicode
+  #database: syt_cool_db
   # database: db/production.sqlite3
