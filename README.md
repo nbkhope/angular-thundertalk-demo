@@ -37,4 +37,4 @@ Run the Rails server:
 bin/rails s
 ```
 
-The application will be available at (http://localhost:3000)
+The application will be available at [http://localhost:3000](http://localhost:3000)
