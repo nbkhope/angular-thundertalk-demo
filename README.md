@@ -2,10 +2,12 @@
 
 A demo of a single-page application using AngularJS and a Rails backend.
 
+![AngularJS Demo](screenshot.png)
+
 ## Team
 
-[David Tao](https://github.com/taodav)
-[Renan Martins](https://github.com/nbkhope)
+* [David Tao](https://github.com/taodav)
+* [Renan Martins](https://github.com/nbkhope)
 
 ## Live demo on Heroku
 
@@ -35,4 +37,4 @@ Run the Rails server:
 bin/rails s
 ```
 
-The application will be available at http://localhost:3000
+The application will be available at [http://localhost:3000]
