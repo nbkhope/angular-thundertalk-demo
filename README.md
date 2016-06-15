@@ -2,7 +2,7 @@
 
 A demo of a single-page application using AngularJS and a Rails backend.
 
-![AngularJS Demo](screenshot.png)
+![AngularJS Demo](screenshot_smaller.png)
 
 ## Team
 
