@@ -38,3 +38,14 @@ bin/rails s
 ```
 
 The application will be available at [http://localhost:3000](http://localhost:3000)
+
+## Frontend
+
+You can find the main script for the Angular application in `app/assets/javascripts/app.js`. That file defines the angular module for the application and establishes the routes (or states). The default state is 'home'.
+
+You can find anything related to `home` inside the directory `app/assets/javascripts/home/`. There are two files there:
+
+* **_home.html** contains the template for the home page
+* **mainCtrl.js** contains the definition to the MainCtrl, a controller that takes care of the posts
+
+You can find the service to communicate with the database to add/retrieve/upvote the posts in the file `app/assets/javascripts/posts/posts.js`. The service is implemented as a factory and uses [$http](https://docs.angularjs.org/api/ng/service/$http) to communicate with the server (this is similar to doing Ajax calls).
