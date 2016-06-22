@@ -41,7 +41,9 @@ The application will be available at [http://localhost:3000](http://localhost:30
 
 ## Frontend
 
-You can find the main script for the Angular application in `app/assets/javascripts/app.js`. That file defines the angular module for the application and establishes the routes (or states). The default state is 'home'.
+The Rails server only serves a single view: **application.html.erb** in `app/views/layouts/`, which contains the single-page application as an Angular app. Inside that file, the scripts for Angular is included using a `javascript_include_tag` Rails helper. That will include everything that is required in `app/assets/javascripts/application.js`. That includes `angular`, `angular-ui-router`, and `angular-rails-templates`.
+
+You can find the main script for the actual Angular application in `app/assets/javascripts/app.js`. That file defines the angular module for the application and establishes the routes (or states). The default state is 'home'. Note app.js is included from application.js because of the ` //= require_tree .` line.
 
 You can find anything related to `home` inside the directory `app/assets/javascripts/home/`. There are two files there:
 
