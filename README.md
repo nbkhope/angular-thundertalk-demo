@@ -6,8 +6,8 @@ A demo of a single-page application using AngularJS and a Rails backend.
 
 ## Team
 
-* [David Tao](https://github.com/taodav)
-* [Renan Martins](https://github.com/nbkhope)
+* [taodav](https://github.com/taodav)
+* [nbkhope](https://github.com/nbkhope)
 
 ## Live demo on Heroku
 
